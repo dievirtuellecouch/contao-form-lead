@@ -1,0 +1,10 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  DVC\FormLead\:
+    resource: ../src
+    exclude:
+        - '../src/{Entity,Migrations,Model,Resources,Tests,Widget}'

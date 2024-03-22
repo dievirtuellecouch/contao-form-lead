@@ -1,0 +1,29 @@
+{
+    "name": "dvc/contao-form-lead",
+    "description": "Can be used to analyze form leads in Contao. Requires terminal42/notification_center for notifications.",
+    "type": "contao-bundle",
+    "version": "1.0.17",
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "contao/core-bundle": "^4.9",
+        "terminal42/notification_center": "^1.6"
+    },
+    "conflict": {
+        "terminal42/notification_center": "<1.6 || >=2.0"
+    },
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Jonathan Hermann",
+            "email": "jh@d-v-c.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DVC\\FormLead\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "DVC\\FormLead\\ContaoManager\\Plugin"
+    }
+}
