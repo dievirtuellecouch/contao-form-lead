@@ -2,11 +2,11 @@
     "name": "dvc/contao-form-lead",
     "description": "Can be used to analyze form leads in Contao. Requires terminal42/notification_center for notifications.",
     "type": "contao-bundle",
-    "version": "1.0.17",
+    "version": "2.0",
     "require": {
         "php": "^7.4 || ^8.0",
-        "contao/core-bundle": "^4.9",
-        "terminal42/notification_center": "^1.6"
+        "contao/core-bundle": "^5.3",
+        "terminal42/notification_center": "2.*"
     },
     "conflict": {
         "terminal42/notification_center": "<1.6 || >=2.0"
