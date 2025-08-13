@@ -14,8 +14,8 @@
     "license": "LGPL-3.0-or-later",
     "authors": [
         {
-            "name": "Jonathan Hermann",
-            "email": "jh@d-v-c.net"
+            "name": "Timo Werlich",
+            "email": "info@websailing.de"
         }
     ],
     "autoload": {
