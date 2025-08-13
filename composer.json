@@ -9,7 +9,7 @@
         "terminal42/notification_center": "2.*"
     },
     "conflict": {
-        "terminal42/notification_center": "<2.0 || >=3.0"
+        "terminal42/notification_center": "<1.6 || >=2.0"
     },
     "license": "LGPL-3.0-or-later",
     "authors": [
