@@ -2,7 +2,7 @@
 
 namespace DVC\FormLead\EventListener;
 
-use Contao\CoreBundle\ServiceAnnotation\Hook;
+use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
 use Contao\Form;
 use NotificationCenter\Model\Notification;
 use Symfony\Component\HttpFoundation\Request;
@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 class FormSentListener
 {
-    private Request $request;
+    private ?Request $request;
 
     public function __construct(
         RequestStack $requestStack
@@ -19,9 +19,7 @@ class FormSentListener
         $this->request = $requestStack->getCurrentRequest();
     }
 
-    /**
-     * @Hook("processFormData")
-     */
+    #[AsHook('processFormData')]
     public function sendLeadNotification(
         array $submittedData, 
         array $formData, 
@@ -46,9 +44,11 @@ class FormSentListener
 
     private function getNotificationTokens(Form $form): array
     {
+        $path = $this->request ? $this->request->getPathInfo() : '';
+
         return [
             'form__lead_form_title' => $form->title,
-            'form__lead_current_page' => $this->request->getPathInfo(),
+            'form__lead_current_page' => $path,
         ];
     }
 }

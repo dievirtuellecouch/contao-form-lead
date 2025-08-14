@@ -10,7 +10,7 @@ $GLOBALS['TL_DCA']['tl_form']['fields']['leadNotification'] = [
         'chosen' => true,
         'tl_class' => 'w50'
     ],
-    'options_callback' => ['NotificationCenter\tl_form', 'getNotificationChoices'],
+    'options_callback' => ['App\Dca\NcFormOptions', 'getNotificationChoices'],
     'sql' => [
         'type' => 'integer',
         'length' => '10',
